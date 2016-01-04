@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<title>Menu : Pixmicat! in Development</title>
+	<style type="text/css">
+	<!--
+	html, body { margin: 0; padding: 0; }
+	html { padding: 2px 8px 2em 2px; }
+	body { background: #EEDFF0; font: 13px Arial,Helvetica,sans-serif; letter-spacing: 1px; }
+	a:link { color: #6666ff; } 
+	a:visited { color: #6666ff; }
+	a:hover { background: #ffffaa; }
+	a:focus, a:active { background: #ffffaa; }
+	h2 { font-size: 15px; line-height: 0; margin-top: 1.4em; }
+	ul, li { margin: 0; padding: 0; }
+	li { margin: 1px 0; list-style: none; text-align: right; }
+	li a { display: block; width: 99%; white-space: nowrap; padding: 1px 0; }
+	-->
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript">
+	// <![CDATA[
+	jQuery(function($){
+		$('ul li').bind({
+			mouseover : function(){
+				$(this).animate({'paddingRight': 5}, 'fast');
+			},
+			mouseout : function(){
+				$(this).animate({'paddingRight': 0}, 'fast');
+			}
+		}).find('a[href]').attr('target', 'main');
+	});
+	// ]]>
+	</script>
+</head>
+<body>
+<h2>程式相關</h2>
+<ul>
+	<li><a href="main.htm">主頁</a></li>
+	<li><a href="history.htm">發展歷史</a></li>
+	<li><a href="archives.htm">檔案下載</a></li>
+	<li><a href="http://pixmicat.wikidot.com/pmcmod">擴充模組</a></li>
+	<li><a href="license/">授權條款</a></li>
+	<li><a href="about.htm">關於Pixmicat!</a></li>
+</ul>
+
+<h2>開發相關</h2>
+<ul>
+	<li><a href="http://www.openfoundry.org/of/projects/492">專案頁面</a></li>
+	<li><a href="http://www.openfoundry.org/of/projects/492/rt/report">回報系統</a></li>
+</ul>
+
+<h2>架設相關</h2>
+<ul>
+	<li><a href="http://pixmicat.wikidot.com/pmcuse:setup">架設教學</a></li>
+	<li><a href="http://pixmicat.wikidot.com/pmcuse:upgradenote">升級說明</a></li>
+	<li><a href="http://pixmicat.wikidot.com/pmcfaq">常見問答集</a></li>
+	<li><a href="http://pixmicat.wikidot.com/">Wiki 知識庫</a></li>
+	<li><a href="http://pixmicat.wikidot.com/pmcuse:util">公用程式</a></li>
+</ul>
+
+<h2>使用相關</h2>
+<ul>
+	<li><a href="user_manual.htm">使用手冊</a></li>
+</ul>
+
+<h2>程式展示</h2>
+<ul>
+	<li><a href="http://2cat.twbbs.org/~scribe/2prog/">程設交流區</a></li>
+</ul>
+
+<h2>程式交流</h2>
+<ul>
+	<li><a href="http://2cat.twbbs.org/~scribe/pixmicat_dev/">開發討論</a></li>
+	<li><a href="link.htm">連結介紹</a></li>
+</ul>
+
+</body>
+</html>

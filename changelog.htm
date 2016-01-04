@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<title>ChangeLog : Pixmicat! in Development</title>
+	<link rel="stylesheet" type="text/css" href="hpstyle.css" />
+	<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	if(typeof(_gat) != "undefined") {
+		var pageTracker = _gat._getTracker("UA-405664-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	}
+	</script>
+</head>
+<body>
+<p class="Banner">修改紀錄 : 新版本新增/修正/移除紀錄</p>
+<div class="quote">
+
+<p class="subBanner" id="pmcpio8">Pixmicat!-PIO 8th.Release.3</p>
+2015/04/03
+<a href="https://github.com/scribetw/pixmicat/issues?q=milestone:8th.Release.4">See 8th.Release.4 milestone</a>
+
+<p class="subBanner" id="pmcpio8">Pixmicat!-PIO 8th.Release.3</p>
+2015/01/26
+<a href="https://github.com/scribetw/pixmicat/issues?q=milestone:8th.Release.3">See 8th.Release.3 milestone</a>
+
+<p class="subBanner" id="pmcpio8">Pixmicat!-PIO 8th.Release.2</p>
+2014/09/14
+<a href="https://github.com/scribetw/pixmicat/issues?q=milestone:8th.Release.2">See 8th.Release.2 milestone</a>
+
+<p class="subBanner" id="pmcpio8">Pixmicat!-PIO 8th.Release</p>
+2014/08/23
+<a href="https://github.com/scribetw/pixmicat/issues?q=milestone:8th.Release">See 8th.Release milestone</a>
+
+<p class="subBanner" id="pmcpio7">Pixmicat!-PIO 7th.Release</p>
+2013/02/27
+<ul>
+	<li>新增<ul>
+		<li>Error handling<ul>
+			<li>新增全域例外捕捉機制，並可產生除錯紀錄</li>
+		</ul></li>
+		<li>PMS<ul>
+			<li>ModuleHelper 模組幫助物件，提供內建方法方便模組開發</li>
+		</ul></li>
+		<li>設定檔開關<ul>
+			<li>增加 DEBUG 除錯開關</li>
+			<li>增加 TRUST_HTTP_X_FORWARDED_FOR 開關</li>
+		</ul></li>
+	</ul></li>
+	<li>Bugfix<ul>
+		<li>修正 MySQL 5.5 不相容的問題</li>
+		<li>修正 PHP 5.4 不相容的問題</li>
+	</ul></li>
+</ul>
+
+<p class="subBanner" id="pmcpio6">Pixmicat!-PIO 6th.Release</p>
+2011/07/11
+<ul>
+	<li>更新軟體授權：Artistic License 2.0</li>
+	<li>新增<ul>
+		<li>PMS:<ul>
+			<li>新增 addCHP, callCHP 以實現模組間互相呼叫的方法</li>
+			<li>constructor 傳入 $PMS 參數方便呼叫</li>
+		</ul></li>
+		<li>FileIO:<ul>
+			<li>為本機圖檔製作索引快取以加速程式計算圖檔用量</li>
+			<li>File I/O 查詢函數 (file_exists, filesize, glob) 改用索引查詢以加快速度</li>
+		</ul></li>
+		<li>預覽圖生成:<ul>
+			<li>預覽圖生成物件修改為準備可支援其他圖像格式</li>
+		</ul></li>
+	</ul></li>
+	<li>Bugfix<ul>
+		<li>修正 AdminFunction 掛載點第二個參數 $param 沒有傳址發生錯誤的問題</li>
+		<li>修改 total_size() 計算方式，使用差異值算法取代重複檢測</li>
+		<li>樣板修正: IE8+標準模式下無法選取回應內文</li>
+		<li>使用 CSS Media query 和 Viewport 改善行動版檢視 (Android / iOS)</li>
+		<li>修正取得 Proxy 後的使用者 IP 的錯誤問題</li>
+	</ul></li>
+</ul>
+
+<p class="subBanner" id="pmcpio5">Pixmicat!-PIO 5th.Release</p>
+2010/05/21
+<ul>
+	<li>PHP 5.3 相容修正
+	<ul>
+		<li>靜態呼叫方法定義為靜態</li>
+		<li>ereg 系列函式以 preg 系列替代</li>
+		<li>修正autoHookAdminFunction參數不是ref的問題</li>
+	</ul>
+	</li>
+	<li>jQuery 1.3.2 相容修正
+	<ul>
+		<li>使用到 jQuery 的模組針對 1.3.2 的 Selector 重寫</li>
+	</ul>
+	</li>
+	<li>新增
+	<ul>
+		<li>fetchPosts 新增 $fields 參數以降低total_size()的記憶體使用量 (log/logflockp只修改prototype)</li>
+		<li>使用 <a href="http://closure-compiler.appspot.com/home">Closure Complier</a> 取代先前使用之 Packer</li>
+	</ul>
+	</li>
+	<li>Bugfix
+	<ul>
+		<li>修正 IE8 標準成像模式下無法複製回應文字的問題</li>
+		<li>修正討論串分頁 ThreadOrder 不正常的問題</li>
+		<li>修正 tim 圖片檔名欄位超過 int 整數最大上限造成檔名溢位儲存無法對應的問題 (SQLite 3)</li>
+		<li>修正內文輸入 PTE 取代標籤會誤變換的情況 (ex: {$NAME_TEXT} => 名稱:)</li>
+		<li>刪除回應排版 $arrLabels 多餘的 {$QUOTEBTN}</li>
+	</ul>
+	</li>
+</ul>
+
+<p class="subBanner" id="pmclegacy_4a">Pixmicat!-Log/MySQL 4th.Anniversary</p>
+2009/05/21
+<ul>
+	<li>因應 IE8 推出，修改針對舊版 IE 的 Bugfix 判斷條件</li>
+	<li>修正發文框下方說明列，回應模式時附加圖檔尺寸限制沒有正確反映的問題</li>
+	<li>修改 getREMOTE_ADDR() 對 HTTP_X_FORWARDED_FOR 的使用問題</li>
+	<li>修正可附加圖檔類型未與 ALLOW_UPLOAD_EXT 同步問題</li>
+	<li>修改上傳圖檔判斷是否存在的方法 (增加 is_uploaded_file() 偵測法)</li>
+	<li>修正發文後判斷附加圖檔容量過大開始刪除的敘述 (>= 改成 >)</li>
+	<li>修正發文時重複引用同一文章多次後造成的 HTML 重複問題</li>
+	<li>修正名稱欄位使用兩次 CleanStr() 導致符號顯示錯誤的問題</li>
+</ul>
+
+<p class="subBanner" id="pmcpio_4a">Pixmicat!-PIO 4th.Anniversary</p>
+2009/05/21
+<ul>
+	<li>新增
+	<ul>
+		<li>支援 AutoPagerize (<a href="http://userscripts.org/scripts/show/8551">http://userscripts.org/scripts/show/8551</a>) 套件的換頁定義</li>
+		<li>新增依特定類別標籤篩選觀看文章時，能根據No.連結找到文章的完整討論串位置</li>
+		<li>PostOnDeletion 掛載點新增 $cond 參數判斷被呼叫時機 (frontend, backend, recycle)</li>
+	</ul>
+	</li>
+	<li>Bugfix
+	<ul>
+		<li>因應 IE8 推出，修改針對舊版 IE 的 Bugfix 判斷條件</li>
+		<li>修正發文框下方說明列，回應模式時附加圖檔尺寸限制沒有正確反映的問題</li>
+		<li>修改 getREMOTE_ADDR() 對 HTTP_X_FORWARDED_FOR 的使用問題</li>
+		<li>修改上傳圖檔判斷是否存在的方法 (增加 is_uploaded_file() 偵測法)</li>
+		<li>修正發文後判斷附加圖檔容量過大開始刪除的敘述 (>= 改成 >)</li>
+		<li>修正發文時重複引用同一文章多次後造成的 HTML 重複問題</li>
+		<li>修正名稱欄位使用兩次 CleanStr() 導致符號顯示錯誤的問題</li>
+		<li>修改管理區上方的連結列 (LinksAboveBar) 掛載點是否登入的判斷參數</li>
+		<li>新增 PIO remove 系方法的 $posts 參數為空之錯誤處理</li>
+		<li>修正後端登入之 Authenticate 掛載點觸發時機</li>
+	</ul>
+	</li>
+</ul>
+
+<p class="subBanner" id="pmcpio4_3">Pixmicat!-PIO 4th.Release.3</p>
+
+2008/09/03
+<ul>
+	<li>新增功能：<ul>
+		<li>搜尋顯示像祭典版那樣列出討論串連結以方便找到串</li>
+		<li>新增前台管理功能 (使用 pixmicat.php?page_num=X 來打開)</li>
+		<li>讓 GD 支援 BMP 16bit RLE 圖片預覽圖生成</li>
+	</ul></li>
+	<li>修正功能：<ul>
+		<li>修正伺服器不支援緩衝區的情況下修改 XHTML MIME 動作會發生錯誤的問題</li>
+		<li>修正設定檔 STORAGE_MAX = 0 之非預期錯誤狀況</li>
+		<li>修正類別標籤輸入 &quot; 變成 \&quot; 的問題 (Magic Qutoes GPC = On 問題)</li>
+		<li>修正類別標籤輸入 XHTML 非法字元造成頁面錯誤的問題</li>
+		<li>讓系統資訊能讓使用者查看目前使用之自動回收文章機制為何及設定參數</li>
+		<li>部分伺服器不相容 $_SERVER['SCRIPT_FILENAME']，修改為常數方式</li>
+		<li>修正當欄位只填 XHTML 非法字元時會被系統清除而沒有任何內容卻也沒填預設值的錯誤</li>
+		<li>修正回應頁面 res 值可能造成的 XSS 和 SQL Injection 漏洞</li>
+		<li>修正 glob() 在不同版本 PHP 的反應結果造成的錯誤</li>
+		<li>修改 AttachLanguage () 語言檔載入功能</li>
+		<li>修正回應文章使用連貼機能時之不當快取，讓後續的連貼機能勾選框保持為勾選狀態的問題</li>
+	</ul></li>
+	<li>PMS 1.2<ul>
+		<li>新增掛載點: 文章被刪除 (PostOnDeletion)、新增文章完成 (RegistAfterCommit)、管理頁面功能選項 (AdminFunction)</li>
+		<li>移除掛載點: UsageExceed (可被 PostOnDeletion 取代)</li>
+		<li>修改在未初始化前呼叫 hookModuleMethod 造成 autoHookXXXX 沒動作的問題</li>
+		<li>autoHookRegistBegin 新增 $isReply 參數</li>
+	</ul></li>
+	<li>FileIO<ul>
+		<li>FTP, Satellite 新增預覽圖可留在本機使用功能 (不將預覽圖送至遠端)</li>
+	</ul></li>
+	<li>PIO 0.6 (SQL-like Only)<ul>
+		<li>修改 SQL-like 系以防止 SQL Injection 攻擊及可能的 XSS 漏洞</li>
+		<li>新增管理區之資料來源維護功能 (檢查/修復/備份)</li>
+	</ul></li>
+</ul>
+
+<p class="subBanner" id="pmclegacy3_8">Pixmicat!-Log/MySQL 3rd.Release.8</p>
+
+2008/09/03
+<ul>
+	<li>修正回應頁面 res 值可能造成的 XSS 和 SQL Injection</li>
+	<li>(MySQL only) 強化針對 SQL Injection 的防護</li>
+</ul>
+
+<p class="subBanner" id="pmclegacy3_7">Pixmicat!-Log/MySQL 3rd.Release.7</p>
+
+2008/02/24
+<ul>
+	<li>讓 GD 支援 BMP 16bit RLE 圖片預覽圖生成</li>
+	<li>修正當 STORAGE_MAX 設為 0 之程式非預期錯誤情況</li>
+	<li>修改 CleanStr() 刪除 XML 1.1 SE 規範之避免用字</li>
+	<li>黑名單 CIDR 比對改用較快的 matchCIDR 函式</li>
+	<li>部分伺服器不相容$_SERVER['SCRIPT_FILENAME']，修改為常數方式</li>
+	<li>部分程式碼位置更動、精簡</li>
+</ul>
+
+<p class="subBanner" id="pmcpio4_2">Pixmicat!-PIO 4th.Release.2</p>
+
+2007/11/20
+<ul>
+	<li>新增功能：<ul>
+		<li>新增 USE_XHTML 選項能夠指定是否回傳 XHTML 檔頭</li>
+		<li>新增封鎖設定黑名單 CIDR Notation 模式支援 (ex: 192.168.0.1/16)</li>
+		<li>實裝 getREMOTE_ADDR() 函式取得使用者 IP (透明代理造成 IP 相關機制錯誤)</li>
+		<li>實裝 Session 後端認證功能</li>
+		<li>新增回應頁面顯示快取功能降低系統負擔 (因應原按鈕式 POST 換頁無法快取改為連結式)</li>
+		<li>新增預覽圖生成函式庫物件，可以支援其他圖像處理函式庫 (支援 GD, IMagick, MagickWand, repng2jpeg 圖像處理方式)</li>
+</ul></li>
+<li>修正功能：<ul>
+		<li>修改 CleanStr() 刪除 XML 1.1 SE 規範之避免用字</li>
+		<li>修正類別標籤顯示頁面呼叫 arrangeThread() 傳入參數不合問題</li>
+		<li>去除使用 $_SERVER['PHP_SELF'] (有 XSS 潛在危機)</li>
+		<li>提前容量暫存刪除時機，避免因預覽圖生成失敗未運作造成暫時的容量計算錯誤</li>
+		<li>引用瀏覽系統捨棄 array_search()、開放引用首篇，對應修正樣板</li>
+		<li>修正 Gzip 壓縮功能關閉時 $Encoding 變數未定義錯誤</li>
+		<li>修正 GD ImageCreateFormBMP 對 16bit BMP 的支援</li>
+		<li>偵測上傳中斷前先判斷是否有資料長度才作，避免作白工</li>
+		<li>修正 auto_link 自動生成連結的支援</li>
+		<li>修正部分輸出原始碼不符 XHTML 1.1 處</li>
+</ul></li>
+<li>PIO 0.5<ul>
+		<li>PIO Structure V3: 加大 status 儲存量</li>
+		<li>新增 FlagHelper 類別，getPostStatus() 會回傳 FlagHelper 物件</li>
+		<li>新增文章自動刪除機制，可用自行定義好的模式來進行自動刪除判斷。並移除 delOldPostes() 方法 (被文章自動刪除機制替代)</li>
+		<li>addPost() 新增 $status 引入</li>
+		<li>修改 setPostStatus()</li>
+		<li>修正 MySQL setPostStatus() 自動更新到 root 欄位的問題</li>
+		<li>修改 Log 增加要求編號文章是否存在判定</li>
+</ul></li>
+<li>PMS 1.1<ul>
+		<li>自事前掛載改為動態掛載，並可於模組頁面時只讀取特定模組</li>
+		<li>新增 AdminList, Authenticate 掛載點</li>
+		<li>修正 autoHookThreadFront/Rear 掛載點生成靜態頁面會重複輸出的錯誤</li>
+		<li>RegistBeforeCommit 掛載點新增 &$status 引入</li>
+		<li>修正當載入模組未有掛載 ModulePage 方法仍試圖執行模組頁面造成錯誤</li>
+		<li>autoHookRegistBegin 修改 $upfileInfo 為傳址, 去除 $POST ($_POST 為 superglobal)</li>
+</ul></li>
+</ul>
+
+<p class="subBanner" id="pmclegacy3_6">Pixmicat!-Log/MySQL 3rd.Release.6</p>
+
+2007/10/19 (Log v071019 only)
+<ul>
+	<li>修正引用瀏覽系統不斷 array_flip 造成搜尋對應文章失敗的問題</li>
+</ul>
+
+2007/10/13
+<ul>
+	<li>封鎖設定黑名單支援 CIDR Notation 模式 (ex: 192.168.0.1/16)</li>
+	<li>減少使用較慢的 array_search 以提升執行速度</li>
+	<li>去除使用 $_SERVER['PHP_SELF'] (有 XSS 潛在危機)</li>
+	<li>修正 fullURL() 使用 $_SERVER['PHP_SELF'] 之 XSS 潛在危機</li>
+	<li>(Log) 提升 LUT 查找表運作效率</li>
+	<li>修正 GD ImageCreateFormBMP 對 16bit BMP 的支援</li>
+	<li>修改 auto_link 函式</li>
+	<li>實裝 getREMOTE_ADDR() 函式取得使用者 IP</li>
+	<li>修正 Gzip 壓縮功能關閉時 $Encoding 變數未定義錯誤</li>
+	<li>提前 LUT, 容量暫存刪除時機，避免因預覽圖生成失敗未運作造成暫時的文章索引錯誤及容量計算錯誤</li>
+</ul>
+
+</div>
+<hr />
+</body>
+</html>

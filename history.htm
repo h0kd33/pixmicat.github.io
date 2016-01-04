@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<title>History : Pixmicat! in Development</title>
+	<link rel="stylesheet" type="text/css" href="hpstyle.css" />
+	<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	if(typeof(_gat) != "undefined") {
+		var pageTracker = _gat._getTracker("UA-405664-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	}
+	</script>
+</head>
+<body>
+<p class="Banner">發展歷史</p>
+<div class="quote">
+
+<div class="txtqu">
+	這裡主要介紹 GazouBBS雙葉改 scribe FIXED 到 Pixmicat! 的發展歷史，間而搭配敘述當時發生的事件，也順便為這些事件做個簡單的紀錄留存。
+</div>
+<p class="subBanner">壹‧從 2cha 到 2cha 避難所的時代 (2005/05)</p>
+<div class="txtqu">
+	首先應該要從 2cha 消失的事件說起，詳細的經過可以拜見 Google 搜尋引擎找尋相關新聞。<p />
+	自從貼圖站 2cha 關閉了之後，對平常習慣於瀏覽 2cha 的人來說，是個重大的打擊，大家一時間也只能說無依無靠，紛紛等待 2cha 有沒有復活的一日 (註：已在 2006/03/18 復站並對外開放)。後來在巴哈的講談說論版 (俗稱的洽版，Chat) 有人說一個熱心人架設了臨時的基地，那就是 2cha 避難所，就功能來說是稍微讓這些苦無地方可逛的人有個能逛的好地方，順便討論一下 2cha 消失的問題。<p />
+	當時的架設者是 ceming ，值得一提的就是架版的程式，他使用了双葉釋出的 futaba.php 原始碼加以 UTF-8 中文化後，使用在避難所上，也開放給有需求的人使用。但是這個版本有個小問題，就是會吃掉 , 逗號後面的字。 (註：原始的 futaba.php 沒這個問題，大概是當時 ceming 在處理的過程不小心轉到&amp;#44;參照碼吧？)<p />
+	而且也因為「 2cha 關閉→ 2cha 避難所成立」的時間太短，這個中文化的程度不是說很高……但也就這樣持續的服務了幾週。 (註： 2cha 避難所開設持續時間為一週多一點而已)
+</div>
+
+<p class="subBanner">貳‧ Komica 、 2cat 的出現和 scribe FIXED 的開端 (2005/05)</p>
+<div class="txtqu">
+	事件後大概兩週， 2005/05/14 ， Komica 出現了，這是 1883 用自家電腦加上 ADSL 對外的網站。一推出雖然馬上有著連線數不夠的問題，但是換了 Apache 伺服器之後，就開始一路服務。而另一頭 misatocat 也提出了聯合站的計畫，這就是 2cat 雙貓的雛型。<p />
+	Komica 上使用的是双葉釋出的 futaba.php ，因此有眾多功能跟原先 2cha 用的 sogetsu 版不太一樣，故 kirur 、 NTj 和攤提出了一些功能改進的建議，使得功能上更佳的方便。這時候 scribe 在 Komica 管理版上便提出了程式碼的「補強計畫」，大意是以 ceming 版為基礎，修正些許問題後另外加上眾多的程式碼功能改進方針，也獲得一些人的支持與同意。之後便由 misatocat 所邀請，加入了聯合站的一員，而 scribe FIXED 的概念至此開始。
+</div>
+
+<p class="subBanner">參‧ scribe FIXED 的第一、二次釋出和 2nya双喵的出現 (2005/05～2005/06)</p>
+<div class="txtqu">
+	基於 ceming 的版本，首先做的是將介面重新中文化以符合一般用語習慣。再來是加入 kirur 、 NTj 、攤、 Hikaru 等人之建議，於數日即完成了修改，並在 NTj 實施壓力測試下成功，依據完成時間 2005/05/21 來命名版本號，定名為「 GazouBBS雙葉改 scribe FIXED ver.050521」，這就是第一個釋出的版本。此版本同時引入 sogetsu 版的限額功能，和修改 Cookies 等等設計。 RT 也在這個時候加入計畫並作出了祭典版本「GazouBBS雙葉改 scribe FIXED ver.050521 Festival Hack」。<p />
+	之後 kirur 、 NTj 、攤、 Hikaru 和 RT 馬上提出其他更多可供修改的建議，於是在兩週之間，利用假日幾天時間修改及共同討論，釋出了 ver.050604 。這個版本修改的幅度算大，除了完全實裝限額功能之外，還加入了 repng2jpeg 外部程式造預覽圖方式，另外還加入了使用者半途中斷上傳的攔截方案和由攤提供的「系統資訊」顯示，開始為 2cat 的直營版所採用。祭典版也幾乎都是同步更新的，唯一的不同是祭典版往後一直是基於050604版所修改上去，因此其內的註解還殘留著過去的痕跡。 (註：祭典版在 Pixmicat! OSS 時代已正式納入計畫成為一員，故過去痕跡已消失，但程式碼仍舊有自己的走向)<p />
+	而這段期間內小企鵝、風魂等人原本就有想再架一個 2cha 的打算，於是先採用了 scribe FIXED 版本試運行並進行內部測試不對大眾開放。後來因為 Komica 、 2cat 等站的出現，也開始對外開放，命名為 2nya双喵。而當時 scribe FIXED 版的缺點就是一個程式只能架一版，缺乏彈性 (註：現在情況依舊，不過曾經曇花一現的 MySQL 非n版本有實做過多版面，現已廢棄)。故小企鵝就開始著手開發給 2nya 專用的程式 (稱為 NYABB )。除了可控制多版面外，也使用了 MySQL 資料庫作媒介。<p />
+	在 050604 版釋出後， scribe 也發表了改版計畫終了聲明，原本開發到這邊就結束了……
+</div>
+
+<p class="subBanner">肆‧ scribe FIXED 的再啟動 - MySQL版 (2005/06～2005/07)</p>
+<div class="txtqu">
+	當時真的以為開發結束了，其實還沒有。<p />
+	NTj當時又提出了動態收縮表單的新設計還有來自 4chan 的引用系統，也使得這段期間 RT 一直更新祭典版但 scribe FIXED 版卻沒有更新的情形。當時一些新奇點子也不斷的被提出來，例如攤的西曆轉日本和曆的設計。 (註：此功能有在攤開 Customized 中加入)<p />
+	一來 2nya 的版面程式效率不錯，二來在原本 futaba.php 處理 Log 檔效率似乎有點低， scribe 開始嘗試移植 scribe FIXED版，使用 MySQL 資料庫為核心。原本是想直接移植 Log 版成為 MySQL 版，但是太複雜，故又嘗試從零到有重新開發 MySQL 版，但是也太累。於是在以双葉的「futaba.phpのmysql版」原始碼為基礎，開始逐步加入 scribe FIXED 版的功能，也接受了 NYABB 開發者小企鵝的指教，開始進行細部修改。嘗試了一段時間也總算有初步的雛型出來了。<p />
+	在 NTj 無法繼續支援漫畫版的情況下，嘗試申請了 bobos.ca 免費空間 (註：此空間服務已消失) 開始營運起漫畫版，採用尚在開發中的 MySQL 版本，打算進行實戰測試，同時可以發現問題直接修改。在六月底的時候接受了伊蘇小勇者的修改提案，開始修改 MySQL 資料表結構，同時第一個版本大致上也成型了。於是在 Madoka82 的要求之下，於 2005/07/03 公開了 MySQL 的第一個版本「GazouBBS雙葉改-MySQL scribe FIXED ver.050630」。<p />
+	題外，同時也藉由 Madoka82 的好友 AndCycle 得知 mormor 還在，只不過 2cha 似乎是復出無望 (註：已復出)。此時 Komica 亦開始支援聯合站 2cat，讓 2cat / Komica 聯合體成為一個繼 2cha 之後的大型貼圖站。
+</div>
+
+<p class="subBanner">伍‧ MySQL 版的另類 - 衛星計畫版 (2005/06～2005/07)</p>
+<div class="txtqu">
+	繼伊蘇小勇者提出了 MySQL 的資料表結構修改後，又提出了一項不錯的點子，那就是假如圖檔能放在免費空間，假使爆了也只是圖不見，文字資料仍在另一台主伺服器保留。這個想法很棒，但是以 futaba.php 的基本結構是不可能達成的。<p />
+	經過與伊蘇小勇者、 AndCycle 、 RT 和 Hikaru 的討論，開始有了初步的雛型：也就是用兩(或三)台伺服器，主伺服器跑網頁資料，副伺服器跑圖檔管理，剩下一台選用的是可讓兩台伺服器連結的 MySQL 資料伺服器(可合併至主伺服器)。依據這個想法開始修改 MySQL 版，將功能分離作成了 futaba.php 和 futaba_sub.php 兩個檔案，但當時計畫沒有主要名字，代號為「衛星計畫β」，後來提供原始碼作參考時有正式取名為「GazouBBS雙葉改-Satellite scribe FIXED」，但不推薦作為正式使用，後續也無更新。<p />
+	另一方面由於 MySQL 版本的活躍修改， Log 版也就這些修改同步更新。但這段時間基本上是以修改 MySQL 版為主， Log 版則是更新之後的附加品而已。
+</div>
+
+<p class="subBanner">陸‧從 bobos.ca 到 2cat.twbbs.org 的漫畫版 (2005/08)</p>
+<div class="txtqu">
+	原本 MySQL 版在 bobos.ca 試驗的很成功，也充當 2cat / Komica 的漫畫版，但好景不常。也許是每日流量太大遭受注意 (流量大概是 bobos.ca 前十名)，也可能是 bobos.ca 不歡迎中文論壇程式架設，在某日毅然決然的未經警告直接刪除帳號，連 scribe 也來不及反應。只好在跟 misatocat 說明原妥之後，給了一台新架設的主機 2cat.twbbs.org 的帳號，暫時將漫畫版移到這邊。<p />
+	這同時也是個好時機來測試「衛星計畫」。於是便將「衛星計畫」副伺服器程式碼拿去裝在 2cat.twbbs.org 上面，MySQL伺服器則用 sql1.badblock.com (註：免費提供的)，主伺服器程式碼則用在 scribe.chkkk.idv.tw 上，這就是漫畫版的第二個形式。利用 2cat.twbbs.org 的高對外頻寬，加上 scribe.chkkk.idv.tw 的快速回應性，一時之間運營的還不錯，而也可以針對問題直接修改，算是一石二鳥。當然修改的成果也可以用在修改 MySQL 版上，算是好處多多。<p />
+	這段期間是以修改「衛星計畫」和 MySQL 版為主， Log 版至此幾乎是不受重視，甚至說改到了一種瓶頸也不為過。
+</div>
+
+<p class="subBanner">柒‧開始進入成熟期的 scribe FIXED 系列 (2005/09～2005/10)</p>
+<div class="txtqu">
+	Log 版自 050711 之後，就有很長一段時間沒更新； MySQL 版也是更新到 050807 就沒動靜了。改版計畫頁也逐漸聽不到修改的聲音，可見版本已逐漸的邁向成熟化，不過也會不會是疏於除錯的緣故呢？<p />
+	在再度開學的幾週後， scribe 也再針對程式的細小問題除錯，同步兩版公開了 ver.050910 版本。這版加入了一些新功能，如連貼機能和管理模式的刪除文章分頁功能，重要的是自這次更新以後 Log 版跟 MySQL 版功能上開始大致相仿，也開始了 Log 版與 MySQL 同步釋出的慣例。<p />
+	而在約一個月後的10月，也再做了一次大幅度更新，實裝了回應分頁和靜態頁面生成限制，也加入了無法生成縮圖的提示圖，至此修改了近半年的 scribe FIXED 也差不多趨近成熟。
+</div>
+
+<p class="subBanner">捌‧ MySQL Experimental 實驗版 - 多重版面和樣板功能的引進 (2005/10～2005/11)</p>
+<div class="txtqu">
+	成熟後之後，我一直在想，為什麼 MySQL 版不充分利用其所具有的強大功能呢？理論上 MySQL 版是比 Log 版好的，不管是處理速度還是效率，甚至是程式寫作上時的難度，都比Log版還要來的快速且簡易。我想到了 2nya双喵的設計 - MySQL多版面。這個功能其實還是值得實裝看看的吧？當時亦有醞釀出要實裝樣板系統例如 Smarty 一類的，我想著想著其實可以去試看看啊。只不過因為修改的幅度太大，使得我另外獨立了一個版本去修改，這個版本就是 Experimental 版本 (實驗版)。<p />
+	首先釋出的 Experimental:01 版本實裝多版面功能，簡單來說是利用陣列和MySQL的資料表、還有資料夾結構的改動來達成多版面的共存，爾後整個站只需要維護一個程式即可，可省去不少麻煩。<p />
+	樣板方面，考慮到◆9xnqOEff5Q版友提到的「一個Template engine遠比主程式還要大的情形真的很奇怪耶。除了AndCycle提到的FastTemplate以外，TinyButStrong這個也體積滿小的，可以考慮看看」讓我開始捨去使用 Smarty 改用 TinyButStrong 來當作樣板引擎，順帶一提那時我對樣板引擎的使用根本一概不知。不過藉由這個實裝，我開始使自己去習慣這些樣板語言，也開始嘗試修改，總算是有了結果並釋出了 Experimental:02 和 Experimental:02fix 版本。<p />
+	但是實裝後首先遇到了效能問題。沒錯，樣板總是多出來的程式碼，除了要另外寫程式碼以供樣板套入，還要載入樣版的函式庫。所以 Exper:02 版本的執行時間硬是比未實裝樣版的 Exper:01 要長很多。<p />
+	我又想到了一般人架貼圖版時可能只會架一個版面而根本不是架一個站。於是又回到了原點，我獨立了一個精簡版本，不加入多重版面和樣板，就只是純粹的貼圖版，定名為n版本，也就是在版本號後面附加個n字樣 (如ver.051118n)。至於 Experimental 實驗版這個系列則成為一般版本(非n版本)，其實就像是 Pro 版跟 Lite 版的差別，在 MySQL 版 ver.051118 中，就有著「ver.051118」和「ver.051118n」的差別。 051118 其實就是加入了實驗版本成果的 Pro 版本；而 051118n 就是舊有的 MySQL 版本的 Lite 版這樣。<p />
+	至此， MySQL 版本開始有了分支，同時得維護n版本和非n版本，但還是以維護n版本為主。
+</div>
+
+<p class="subBanner">玖‧計畫重生 - 圖咪貓 Pixmicat! (2006/01)</p>
+<div class="txtqu">
+	很高興在邁入2006年有一個大改變。在這年的開頭， Alica 加入了聯合站的一員，同時也給了 scribe FIXED 版一些建議，其中重要的就是符合用碼得 W3C 標準。雖然不依照 W3C 標準也沒什麼關係，但依照準則後在未來的設計也不無好處。於是我便與 Alica 商量，因為我看過他純手工打造的 XHTML 網頁，覺得應該可行，便交給他這個任務。 (事實上我自己從1999年做網頁做到現在，還沒有一次真正標準化過)<p />
+	交給他的選擇果然是正確的，不出幾天就修改出了成品交給我。可惜的是原本是要依照 XHTML 1.1 的標準，不過此標準過於嚴格所以打消了念頭，改以符合 HTML 4.01 Transitional 標準為主。另一方面， RT 亦自行對其祭典版標準化。有了兩份標準化後的原始碼，我取一方之長補另一方之短再加上整合修改後，也完成了標準化的動作，此時是以 HTML 4.01 Transitional 標準為主。<p />
+	但自己的某種堅持驅使我背著他們自己搞一套標準化，經過瀏覽器截圖網站browsercam.com的專案測試後，成功地搞出了新的 XHTML 1.1 標準化，後續也以這套標準化為主。<p />
+	又以前就覺得這個計畫一直用自己的名字當名稱，也沒有一個好名字，實在是有點奇怪。剛好趁著2006年新氣象，胡思亂想取了「Pixmicat!」作為這個計畫的新名字。字根主要是由 Pix(Pics) + Komica + 2cat 加以融合，不但有貼圖版的元素，更加上了聯合站的名稱加以變化。 (以前就想惡搞站名成Komicat了 XD)<p />
+	於是乎，送走了冗長又太自我化的 scribe FIXED 名稱，取而代之的是嶄新的Pixmicat!。隱含「Pix me,cat!」的理念 (Pix當動詞，有「給我圖」的意味)，加上圖咪貓的中文俗名，只差沒有將這隻貓娘形象化 XD (萌貓娘代表圖永久募集中，意者請洽……[被拖走)<p />
+	除了名稱更換外，版本號的命名方式也稍有修正，原本的 ver.XXXXXX 改以 vXXXXXX 取代，而 MySQL 版本的n版本改成N版本，非n版本則是暫時凍結，因為想將功能作成外部引用使用，下面會提到。
+</div>
+
+<p class="subBanner">拾‧Pixmicat! OSS - 自由軟體化 (2006/02/25)</p>
+<div class="txtqu">
+	2006/01/07，當 Alica 在提出修改建議的時候，突然提到「要不要開個 OSS 專案？做得好的話說不定可以反攻日本喔……」。這句話讓我深思良久，但不清楚那個 OSS 到底是什麼。後來 AndCycle 補述了 OSS 的方法，那就是挑一份中意的 License 跟檔案一起釋放。於是我起了興趣，開始看了一些著名的授權條款。但是因為是第一次碰，一時之間也糊裡糊塗不知道哪個好。<p />
+	經過長久的討論之後，先暫定以常見的 GPLv2 作為授權條款，找了經濟部工業局及中央研究院資訊科學研究所共同成立的「自由軟體鑄造場」一站申請了新專案，開始了初步的 Open Source Software 開放源碼(自由軟體)化。自由軟體的定義不同於免費軟體，雖然大多數的自由軟體不需付費，但是免費軟體不全是自由軟體。自由軟體的定義請參見中文維基百科的條目 (<a href="http://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E8%BD%AF%E4%BB%B6">自由軟體</a>)。事實上 Free Software 和 Open Source 兩者還是容易混為一談，不過這裡也不打算詳細說明。<p />
+	但是原本的 Pixmicat! 要成為 OSS 有個大包裹，那就是繼承自最原始的 GazouBBS 創始者レッツPHP!的自有條款。 GPL 等授權基本上是不允許再附加條款限制使用者的，但是レッツPHP!有個條款是希望使用者保留頁尾的連結不要刪除。還有一個難點是，我們基本上不希望 Pixmicat! 被拿來營利，不過這與很多授權條款相違背，在多方的查找、妥協之下，先後找了 GPLv2 、 MPL 、 Artistic 、 CDDL ，最後終於決定了使用的授權條款 － The Clarified Artistic License。 (相信我，這是邁向 OSS 最難的一步)<p />
+	決定好了使用的授權條款，我立刻開始拉人加入專案，拉到了 RT 和 Alica 兩位為此專案盡一份心力。至此開始利用 Subversion 維護專案，也利用問題回報系統共同討論修改。專案也將 RT 的祭典版納入了 Pixmicat! 旗下，成為 Log 和 MySQL 版外的另一個維護版本。分工方面，我請了 Alica 負責了 CSS 與介面的修改維護工作，而 RT 和我則致力於程式碼的修改。搞了兩週後終於第一個 OSS 化的版本 v060319 (代號：1st.Release) 釋出了！此版本主要是加入了 Alica 對版面及 CSS 修改的成果。<p />
+	而凍結後的 MySQL非n版本的理念在 1st.Release 中發揚光大。由於 TinyButStrong 相較於 Pixmicat! 還是太大且速度上多有不理想之處，乾脆自己著手撰寫最適合 Pixmicat! 的樣板函式庫。於是反覆經過效能測試後，撰寫了 Log / MySQL 版本皆可用的內嵌樣板函式庫 － Pixmicat! Template-Embedded Library，簡稱 PTE 。相較於舊的 TBS ，新的 PTE 在功能上相當精簡，故變化性並沒有 TBS 強大，但效率上卻是相當滿意。由於是專為 Pixmicat! 而打造的，檔案大小只有 1.9KB 。於是 MySQL 的非n版本就沒有留存的必要，故將N版本重新定位成標準版本，也就是 v060217N → v060319 ，至此 MySQL 版本整合完成，而 Log 版也可以享受到樣板功能。
+</div>
+
+<p class="subBanner">拾壹‧ 2cha 復活、 2nd.Release！ (2006/03～2006/05)</p>
+<div class="txtqu">
+	在 Pixmicat! 釋出了 1st.Release 好一段時日之後，沉寂已久的 2cha 於 2006/03/18 再度復活！原本 2cat / Komica 管理群曾擔心因網站性質重複且 2cha 的支持者尚在，一旦 2cha 決定要重回貼圖站帝國，那後續我們是不敢想像。不過 2cha 的代表人mormor卻是先以MAD分流為主、貼圖版以後再說的策略，化解了這場尷尬。當然這期間也是有部分人士勸說 2cha 加入聯合站，反正怎樣戰都沒好處，不妨加入聯合站陣容一起盡份心力，但 2cha 目前是持保留態度。<p />
+	而這段期間內也許是 kirur 的請求、亦或是小企鵝的順手動作，同樣暫時停止營運的 2nya 也再度開放了，不過站方目前是持被動態度，也就是說因為 2cat / Komica 的壯大， 2nya 再開也幾無意義，於是目前是荒廢狀態，停止營運。<p />
+	在 1st.Release 釋出之後， Pixmicat! 開發團隊開始著手計劃第二次釋出。第一次釋出著重在外觀介面，那第二次釋出著重的就應是程式效率與功能性了。基於這個目標，團隊先將預定釋出日給大幅延後至暑假，這麼一來中間有許多時間可以大幅修改。但其實有大半原因是負責程式修改之一的 scribe 本身是個大學應屆考生，因為會衝期加上必須將課業當作重心之故，故時間才會放在暑期。<p />
+	首先做的是將自 GazouBBS 以來的陳腐架構翻新，將不適用的且效率低的程式碼取掉，並更改了程式運作方式，使程式效率增加。因為 Pixmicat! 本身可比喻為重裝型的 GazouBBS ，裝了這麼多武器想必機動性會大幅降低，這次的結構大翻修主要就是想增加機動性(輕量化)。經過了修改程式運作及瘦身後，運作效率果然得到大幅提升，如此才可以方便加掛這些武器進行戰鬥。另外也將一些重複的函式獨立出來成外部檔案，方便架設者自由修改或是開發團隊維護。<p />
+	輕量化達成了，接下來又可以加掛更多兵器啦。舉凡反櫻花日文措施、 DNSBL 黑名單、引用瀏覽系統、管理員キャップ強化……等等，再一次的提升功能性。為了確保今次的超‧重裝型不會有拖慢或錯誤的狀況，實施了非常長時間的Beta測試，在功能性和機動性取得了平衡。<p />
+	因為改好了也沒什麼可以再改的了，想想也不必拖到七月，於是做了最終修改及確認後，於2006/05/13正式釋出了 2nd.Release 版本，這也是第一次強調開發代號而不強調開發時間的做法，類似 Windows 作業系統一樣吧， XP 其實是 NT 5.1.2600 這樣。
+</div>
+<p class="subBanner">拾貳‧看板娘 Minamo 和 Pixmicat! 的里程碑: PIO (2006/05～2006/08)</p>
+<div class="txtqu">
+	有兩個比較重要的事件，一是看板娘 Minamo 的催生，二是 PIO 的完成。<p />
+	前者是意外的機會促成我去向雨夜雫邀稿，後來也成功地設計出來看板娘Minamo，並用於OSSF專案代表圖和官方網頁入口圖，另外還有一張 1024×768 桌布。詳細內容請參照「關於 Pixmicat!」一欄。<p />
+	後者是突破性的進展之一。我大約在2006年3月底、4月初(2nd.Release 開發期)有提過 PIO 這個名詞，那時候暫定全名是「Pixmicat! I/O Proxy」，也就是輸入輸出代理者。功用是讓資料寫入/讀取藉由這個介面溝通，此舉除了可以一舉讓 Log 和 MySQL 共用更多函式，且也可以針對更多媒介支援，撰寫 mod 上也將更加容易。不過礙於大學指考和一些個人因素(根本沒頭緒 + 懶orz)，連草案都沒有出現便這樣如石沉大海地沒消息了。<p />
+	終於在步入暑假的7月初， RT 突然又將這個案子搬出檯面，不過他當時也說過要好好制定 PIO 的 API 並不容易，不過看起來是有點在成型的感覺，我便加入推了一把，將當初對 PIO 寄予的功能和構想再度重述了一遍。因為我自己當時正在指考的關係，便交予 RT 全責處理。他以自改的 Joyful Note-NLP 作為基礎，花了共計 18 個小時制定規格，制定出了雛形 API ，同時也將 Pixmicat!-Festival FTP 版的功能合成了 File I/O ，並可以自由切換是否使用遠端主機 FTP 儲存圖檔。<p />
+	07/04 ， PIO 雛形完成了，全名為「Pixmicat! data source I/O」，首先完成的是文字檔 Log 的 API 。於是我便照著 PIO 雛型規格造了 MySQL API ，同時也回報了一些設計上的改進處使得兩邊都不至於拐手拐腳，還能保持一定的效率。但原有的 pixmicat.php 的架構已不適合 PIO ， Log API 還好， MySQL API 會多執行一大堆要求造成效率不佳。於是我便全權處理 pixmicat.php 的重寫工作，花了幾小時不知道，將整個PMC核心 - updatelog() 函式刪掉重寫以提高運作效率，並能同時兼顧 remake 模式、單頁輸出模式、回應模式加討論串/回應分頁效果，另外將討論串輸出的部分獨立，順便將其他程式碼做做修正。<p />
+	而 RT 在我完成了 MySQL API 後，便製作了 SQLite 和 PostgreSQL 的 API ，這樣就可以支援多數的資料來源了。於是開始進行回歸測試(Regression test)，我列出了約25道的測試程序進行測試並進行了多次不同資料來源的測試。測試過程中發現不少問題，也一一的修正了。至此新的 PIO 已告完成，今後將以此整合了所有資料來源(Log, MySQL, SQLite, PostgreSQL)的 PIO 版本為重心。
+</div>
+
+<p class="subBanner">拾參‧PIO版正式完成 (2006/12～2007/01)</p>
+<div class="txtqu">
+	當初預定在九、十月釋出 PIO 版，無奈因為眾多不可抗拒的外在因素，使得進度嚴重遲緩。所以若要說 PIO 有半年多的開發期，其實裡面有三分之一都放掉沒在作。<p />
+	為了解決目前沒有文件庫的狀況，利用免費 Wiki 服務 wikidot.com 申請了專屬於 Pixmicat! 的 Wiki，其內容也隨著時間陸續豐富，許多開發的規格和理念、簡介等全部都有，是文件上的一大突破。<p />
+	最後為了打破此一奇妙的延宕狀態，專案領導人 scribe 決定加足馬力全力革新趕工，前後制定了新的 PIO 和 FileIO 兩個函式庫，也開發建置完成。新的 FileIO 除了支援本機 / FTP 模式，尚有 Alica 提議的 ImageShack 和舊有的衛星計畫版。而衛星 PHP &amp; Perl CGI 也在 scribe 和 RT 的共同努力下開發完成。最後將類別標籤功能完成，整個程式主體便宣告開發完成。<p />
+	經過封閉測試和公測後，於 2007/01/06 隨著舊有 Log/MySQL 的修正版正式面世。
+</div>
+<p class="subBanner">拾肆‧ 4th.Release (2007/06)</p>
+<div class="txtqu">
+	經過一輪頻密的測試和修改， Pixmicat!-PIO 4th.Release 釋出，為 Pixmicat! 立下新的里程碑。跟前次版本相比主要又引進了幾項重大特色：PMS 模組系統、PTE 樣版函式庫預設化、支援多國語系檔。<p />
+	首先，引入 PMS (Pixmicat! Module System) 模組掛載系統，使 Pixmicat! 可以以模組增加額外的功能，利用眾多的掛載點 (Hook Point) 概念可以在許多地方賦予模組權限並介入系統執行，進而達成強化系統的效果。<p />
+	其次，原先一直作為選擇性使用的 PTE 樣版函式庫亦全面強化，並取代原有的內建輸出，使模組更容易增加或修改輸出。<p />
+	最後，引入 lib_language 國際化函式庫，可支援各種語系，為日後國際化做好準備。
+</div>
+<p class="subBanner">拾伍‧邁向國際 (2008/03)</p>
+<div class="txtqu">
+	隨著 PIO 版趨向成熟，祭典版以及 Log/MySQL 版的歷史任務結束了，祭典版的功能可藉由 PTE 樣版函式庫得以重現，Log/MySQL 也隨著 PIO 的整合成熟而卸任。與此同時，Pixmicat! Project 將邁向國際。<p />
+	2008/03，RT 在 Google Code 中建立了以英文為主的 Pixmicat! 專案頁面 (http://pixmicat.googlecode.com/)，並在 Google Code 中以 svnsync 建立原先 svn 版本庫的鏡像，正式打開了面向國際的大門。我們的終極目標是讓大家想到貼圖版，就想到 Pixmicat!，希望此舉能夠朝目標更進一步。
+</div>
+<p class="subBanner">拾陸‧Legacy End-of-Life (2009/05)</p>
+<div class="txtqu">
+	2009/05/21，正是 Pixmicat! 的四週年紀念日。由於 PIO 版的成熟，Log/MySQL 版的任務終於完成，於當天停止維護，不再更新。另外也為了推動 PHP 5 的普及率 (有個網站: <a href="http://gophp5.org/">Go PHP5</a>)，開發團隊亦決議 PIO 版日後不再向下支援 PHP 4。同時全部版本為了慶祝四週年紀念日，於當天釋出名為 4th.Anniversary 的紀念版。
+	同時，PIO版程式碼的日漸肥大與不易修改及維護，全新設計架構發展的 Pixmicat! 計畫也該開始推動了。
+</div>
+<!--
+<p class="subBanner">‧ (/)</p>
+<div class="txtqu">
+</div>
+-->
+
+</div>
+<hr />
+</body>
+</html>

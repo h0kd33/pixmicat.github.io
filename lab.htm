@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<title>Lab : Pixmicat! in Development</title>
+	<link rel="stylesheet" type="text/css" href="hpstyle.css" />
+	<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	if(typeof(_gat) != "undefined") {
+		var pageTracker = _gat._getTracker("UA-405664-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	}
+	</script>
+</head>
+<body>
+<p class="Banner">實驗室 : 新版本預定實裝或實驗中 / 計畫中項目</p>
+<p>Last Updated: 2013/2/8 下午 05:52</p>
+<div class="quote">
+
+<ul>
+	<li><a href="#pmc2_draft">Pixmicat!2 (暫定) : New Pixmicat! Frame</a></li>
+</ul>
+
+<p class="subBanner" id="pmc2_draft">Pixmicat!2 (暫定) : New Pixmicat! Frame</p>
+<ul>
+	<li>全新開發撰寫，藉以擺脫掉 GazouBBS / futaba 包裹，但實質上已是全新開發的版本<br />(硬要說一樣也只有排版...其他措施貼圖板都這個樣，能說是抄襲嗎？)</li>
+	<li>框架核心由以往的巨核模式(所有功能都在同一檔案)變為微核模式(主程式極小，元件極多)</li>
+	<li>核心函式封裝，讓其他擴充模組可共享使用</li>
+	<li>從原本的 PHP 小程式變成 Web Application 的概念</li>
+	<li>遵從 REST (Representational State Transfer) 架構風格，以 pixmicat.php/版面/動作/參數 的 URL 為代表<br />(可使用 .htaccess 變成 /版面/動作/參數 比較好看)</li>
+	<li>本體直接支援多設定檔、多版面設定，同時將各個架構以資料夾分明便於分辨及維護</li>
+	<li>記錄檔繼承自 PIO 版本結構，也就是說 Pixmicat!2 是以 PIO 版為基礎</li>
+	<li>完整的頁面快取，只要記錄檔資料沒有更新，就盡量採用快取</li>
+	<li>原生支援 AJAX，當使用者關閉 JavaScript 也能提供傳統的頁面操作</li>
+	<li>Issues:<ul>
+		<li>PIO SQL based (不再支援純文字檔案格式)</li>
+		<li>各函式封裝、重構 (可重複呼叫, 工作量小): Ref<a href="http://2cat.twbbs.org/~scribe/pixmicat_dev/pixmicat.php?res=1950#r1973">#1973, #2252</a>, <a href="http://2cat.twbbs.org/~scribe/pixmicat_dev/pixmicat.php?res=2416#r2491">#2491</a></li>
+		<li>PMS 模組掛載點重新架構問題: Ref<a href="http://2cat.twbbs.org/~scribe/pixmicat_dev/pixmicat.php?res=1950#r1973">#1973, #2012, #2331, #2332</a>, <a href="http://2cat.twbbs.org/~scribe/pixmicat_dev/pixmicat.php?res=2492#r2493">#2493</a></li>
+		<li>PMS 模組設定項目儲存機制，或可擴充為 PMC 的設定項目儲存? (一些暫存資訊如總資料筆數)</li>
+		<li>可開放API供外部程式呼叫運用?</li>
+		<li>FileIO 計算版面附加圖檔數目及大小的更佳方法 (建立檔案對應表格來取代逐個尋找?)</li>
+	</ul></li>
+</ul>
+
+</div>
+<hr />
+</body>
+</html>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<title>Setup Manual : Pixmicat! in Development</title>
+	<link rel="stylesheet" type="text/css" href="hpstyle.css" />
+	<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	if(typeof(_gat) != "undefined") {
+		var pageTracker = _gat._getTracker("UA-405664-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	}
+	</script>
+</head>
+<body>
+<p class="Banner">架設手冊</p>
+<div class="quote">
+
+<p class="subBanner">前言</p>
+<div class="txtqu">
+本架設手冊主要提供給有意架設Pixmicat!的朋友，希望能藉由此手冊補足壓縮包內簡單的說明。
+無論您是使用自架伺服器、虛擬主機或者是免費空間，都希望您能藉由此手冊順利架設並設定。<p />
+※新版PIO版將與舊版有些許不同，因為舊版仍然存在，底下會作分隔。
+</div>
+</div>
+
+<p class="Banner">PIO版本 (新版) 架設</p>
+<div class="quote">
+
+<p class="subBanner">一、準備環境及上傳檔案</p>
+<div class="txtqu">
+首先您必須先取得一份Pixmicat!的重製版本，不管是從其他網站免費下載的，或者是從本專案下載的。
+您在事前必須準備好對應的伺服器環境，並且決定PIO使用的資料來源。
+PIO目前支援Log / MySQL / SQLite / PostgreSQL四種資料來源，選好一個來源後也請準備對應的資料來源環境，SQL類的都要有伺服器支援，如MySQL需要MySQL主機位置及埠號、帳號、密碼和資料庫名稱。
+Pixmicat!最低的運行環境是PHP 4.3.0版本和GD Version 2.0.28。推薦環境為Apache Server / PHP 4.4.x 或 5.1.x，且安裝如eAccelerator, APC, memcached的效能快取套件。<p />
+
+架設方式很簡單，首先在伺服器建立一個目錄 (例如pixmicat)，並將其目錄權限設為777。然後上傳壓縮包解壓縮後的檔案。記得pio目錄也要上傳！這是重要的核心元件。
+</div>
+
+<p class="subBanner">二、修改設定檔config.php</p>
+<div class="txtqu">
+接下來請開啟您的文字編輯工具，此編輯工具必須要支援UTF-8編碼且必須能另存成不含BOM字元的檔案。
+如果是視窗系統，不推薦使用微軟的記事本，用它儲存一定會存入BOM，這會影響到整個程式的運作。我推薦EmEditor這套軟體。
+選定好編輯器後，請用它打開config.php，可以進行版面的細部設定，請參照註解修改。<p />
+
+最先需要修改的是PIO的資料來源連線字串 (CONNECTION_STRING : PIO資料來源設定)，目前Pixmicat! PIO版本支援文字檔 / MySQL / SQLite / PostgreSQL四種資料來源，各有不同的連接字串。
+注意到因為目前的技術問題，第一次選定好後設定、執行完成即不可再轉換來源，如果轉換了原有資料也不會跟著過去而是再度初始化一個新的環境。雖然舊有資料不受影響但是得申明請慎選資料來源，因為目前還沒有轉換工具可以自由變換，用到一半才發現想用其他來源就很麻煩囉。<p />
+
+如果對選取資料來源苦惱的話，建議使用Log文字檔來源，此方式門檻最低，相對的問題可能也比較多。
+如果伺服器允許的話，推薦使用MySQL或是SQLite來源，這兩個都是SQL資料庫形式，本身就對存取資料有最佳化過，不論是效率或是穩定度都比較高。<p />
+
+連線字串格式：
+<dt>Log文字檔： log://(文章儲存檔檔名):(樹狀結構檔檔名)/</dt><dd>範例： log://img.log:tree.log/</dd>
+<dt>MySQL伺服器： mysql://(登入帳號):(登入密碼)@(主機位置)[:埠號(可省略)]/(資料庫名)/(資料表名)/</dt><dd>範例： mysql://pixmicat:pass@127.0.0.1/test/imglog/</dd>
+<dt>SQLite資料庫： sqlite://(資料庫檔案名稱)/(資料表名)/</dt><dd>範例： sqlite://pixmicat.db/imglog/</dd>
+<dt>PostgreSQL伺服器： pgsql://(登入帳號):(登入密碼)@(主機位置):(埠號)/(資料庫名)/(資料表名)/</dt><dd>範例： pgsql://pixmicat:pass@127.0.0.1:6886/test/imglog/</dd>
+<p />
+修改過後的連線字串像這樣：<br /><blockquote>define("CONNECTION_STRING", 'mysql://pixmicat:pass@127.0.0.1/test/imglog/');</blockquote><p />
+
+再來需要修改的是ADMIN_PASS (管理員密碼)。請務必修改，避免被有心人士取得權限。
+其他設定方面由於設定檔內的註解還算詳細，這裡也不打算逐一介紹，您可以先架設使用一段時間後再依需求微調程式。<p />
+對了，如果是MySQL和PostgresSQL來源，請確定伺服器上已存在設定的資料表名稱，因為權限問題恕無法為您自動增加。但資料表不一定要存在，初始化時可以自動建立結構。<p />
+
+修改完成後請儲存config.php，注意到儲存的時候請選擇UTF-8編碼，並且不加入Unicode署名 (BOM)。然後上傳至伺服器上覆蓋舊檔。
+</div>
+
+<p class="subBanner">三、進行初始化</p>
+<div class="txtqu">
+然後開啟瀏覽器，輸入pixmicat.php的URL位置，等待程式自動設定環境後，請手動利用文字編輯器開啟pixmicat.php，在接近底部的地方找到：<p />
+init(); // ←■■！程式環境初始化，跑過一次後請刪除此行！■■<p />
+將其整行刪除或前頭加上「//」註解掉再度上傳覆蓋原檔，這樣就架設完畢了。
+</div>
+
+<p class="subBanner">進階設定</p>
+<div class="txtqu">
+這樣建立的Pixmicat!完全是預設的標準環境，如果使用者想要自訂化有幾個方向可以修改。(依難易度排列，越後面越進階)
+</div>
+<ol>
+	<li>config.php</li>
+	<li>mainstyle.css</li>
+	<li>lib_common.php</li>
+	<li>PTE : Pixmicat! Template Embedded 樣版引擎</li>
+	<li>pixmicat.php</li>
+</ol>
+
+１‧config.php
+<div class="txtqu">
+這是藉由修改設定檔的項目來達成自訂化的效果，是最簡單最有效的方法。諸如版面名稱、功能切換、封鎖設定、外觀設定等等。
+比較直接的是外觀設定，藉由修改這些項目可以控制一頁顯示的討論串數量、回應模式一頁顯示回應數、內文最大接受文字Bytes大小或是標註引用回文顏色等。另外發文表單下面的額外說明文字也可以從這邊修改。
+</div>
+<p />
+２‧mainstyle.css
+<div class="txtqu">
+這是藉由修改樣式表 (Cascading Style Sheet)的方式來改變版面的外觀，這個檔案主要是管理版面的排版和色彩設定，如果懂CSS樣式表的話可以在這邊自由發揮。
+預設的futaba配色風格可以改成其他風格。請參考註解可以幫助設定。
+</div>
+<p />
+３‧lib_common.php
+<div class="txtqu">
+這是藉由修改共用函式 (Log, MySQL)的方式來改變版面外觀的做法。由於這些重複性高的函式大多是屬於版面輸出之用，類似的像頁頭、頁尾輸出都在這邊可以找到修改。如果懂XHTML的話可以輕鬆上手，小心不要把原本的PHP結構搞亂了。<p />
+注意到Pixmicat!採用的是XHTML 1.1輸出，所以一些原本HTML存在的標籤在XHTML變的不存在了，一些屬性(比如說超連結&lt;a&gt;的target屬性)也取消了，比較容易忽略的是顯示「&amp;」文字不能直接打出來，請用&amp;amp;這樣的方式，這是XHTML的規範。
+</div>
+<p />
+４‧PTE : Pixmicat! Template Embedded 樣版引擎
+<div class="txtqu">
+Pixmicat! 預設輸出討論串並不使用PTE，不過可以修改config.php來啟動。藉由讀取寫好的tpl樣板檔來與資料做整合的動作再輸出。
+壓縮檔內有附上inc_futaba.tpl，即是個簡單的範例，可以修改樣板檔以達成其他排版方式。<p />
+＊使用PTE請記得上傳lib_pte.php PTE函式庫，另外要在config設定開啟及使用的樣板檔。開啟PTE會使得程式執行時間加長，但基本上不致影響效率。
+</div>
+<p />
+５‧pixmicat.php
+<div class="txtqu">
+這是會PHP的使用者可以選用的修改方式，直接打開pixmicat.php修改PHP程式碼。
+除非你真的有需求改到處理資料的部份或一些沒獨立出來的XHTML碼 (比如說系統資訊[showstatus()]、搜尋[search()]、後端管理介面[admindel()])，否則請不要嘗試修改。
+再次申明，除非你有能力和知道你在改什麼，否則請不要嘗試修改！
+</div>
+
+</div>
+
+<p class="Banner">Log / MySQL版本 (舊版) 架設</p>
+<div class="quote">
+
+<p class="subBanner">上傳檔案</p>
+<div class="txtqu">
+首先您必須先取得一份Pixmicat!的重製版本，不管是從其他網站免費下載的，或者是從本專案下載的。
+您在事前必須選定好您要的是Log版、MySQL版還是祭典版，且必須準備好對應的伺服器環境。Pixmicat!最低的運行環境是PHP 4.3.0版本和GD Version 2.0.28。<p />
+
+架設方式很簡單，首先在伺服器建立一個目錄，並將其目錄權限設為777。然後上傳壓縮包內的檔案。
+如果要說是上傳哪些的話，有pixmicat.php、lib_common.php、config.php、mainscript.js、iedivfix.js、mainstyle.css、nothumb.gif。如果你想使用PTE樣板函式庫，請也上傳lib_pte.php。<p />
+</div>
+
+<p class="subBanner">設定config</p>
+<div class="txtqu">
+接下來請開啟您的文字編輯工具，此編輯工具必須要支援UTF-8編碼且必須能另存成不含BOM字元的檔案。
+如果是視窗系統，不推薦使用微軟的記事本，用它儲存一定會存入BOM，這會影響到整個程式的運作。我推薦EmEditor這套軟體。
+選定好編輯器後，請用它打開config.php，可以進行版面的細部設定，請參照註解修改。<p />
+
+由於設定檔內的註解還算詳細，這裡也不打算逐一介紹，您可以先架設使用一段時間後再依需求微調程式。但ADMIN_PASS管理員密碼請務必修改，避免被有心人士取得權限。<p />
+如果是MySQL版，請依照MySQL伺服器的設定更改Part 1：程式基本設定的「MySQL伺服器連接設定」，如位置、帳號、密碼、資料庫名稱(需已存在)等都要輸入正確，至於Part 2：板面各項細部功能設定的SQLLOG則可以視情況更改，此一資料表不一定要存在，在初始設定時可以自動建立結構。<p />
+
+修改完成後請儲存config.php，注意到儲存的時候請選擇UTF-8編碼，並且不加入Unicode署名 (BOM)。
+</div>
+
+<p class="subBanner">初始設定</p>
+<div class="txtqu">
+然後開啟瀏覽器，輸入pixmicat.php的URL位置，等待程式自動設定環境後，請手動利用文字編輯器開啟pixmicat.php，在接近底部的地方找到：<p />
+init(); // ←■■！程式環境初始化，跑過一次後請刪除此行！■■<p />
+將其整行刪除或前頭加上「//」註解掉再度上傳覆蓋原檔，這樣就架設完畢了。
+</div>
+
+<p class="subBanner">進階設定</p>
+<div class="txtqu">
+這樣建立的Pixmicat!完全是預設的標準環境，如果使用者想要自訂化有幾個方向可以修改。(依難易度排列，越後面越進階)
+</div>
+<ol>
+	<li>config.php</li>
+	<li>mainstyle.css</li>
+	<li>lib_common.php</li>
+	<li>PTE : Pixmicat! Template Embedded 樣版引擎</li>
+	<li>pixmicat.php</li>
+</ol>
+
+１‧config.php
+<div class="txtqu">
+這是藉由修改設定檔的項目來達成自訂化的效果，是最簡單最有效的方法。諸如版面名稱、功能切換、封鎖設定、外觀設定等等。
+比較直接的是外觀設定，藉由修改這些項目可以控制一頁顯示的討論串數量、回應模式一頁顯示回應數、內文最大接受文字Bytes大小或是標註引用回文顏色等。另外發文表單下面的額外說明文字也可以從這邊修改。
+</div>
+<p />
+２‧mainstyle.css
+<div class="txtqu">
+這是藉由修改樣式表 (Cascading Style Sheet)的方式來改變版面的外觀，這個檔案主要是管理版面的排版和色彩設定，如果懂CSS樣式表的話可以在這邊自由發揮。
+預設的futaba配色風格可以改成其他風格。請參考註解可以幫助設定。
+</div>
+<p />
+３‧lib_common.php
+<div class="txtqu">
+這是藉由修改共用函式 (Log, MySQL)的方式來改變版面外觀的做法。由於這些重複性高的函式大多是屬於版面輸出之用，類似的像頁頭、頁尾輸出都在這邊可以找到修改。如果懂XHTML的話可以輕鬆上手，小心不要把原本的PHP結構搞亂了。<p />
+注意到Pixmicat!採用的是XHTML 1.1輸出，所以一些原本HTML存在的標籤在XHTML變的不存在了，一些屬性(比如說超連結&lt;a&gt;的target屬性)也取消了，比較容易忽略的是顯示「&amp;」文字不能直接打出來，請用&amp;amp;這樣的方式，這是XHTML的規範。
+</div>
+<p />
+４‧PTE : Pixmicat! Template Embedded 樣版引擎
+<div class="txtqu">
+Pixmicat! 預設輸出討論串並不使用PTE，不過可以修改config.php來啟動。藉由讀取寫好的tpl樣板檔來與資料做整合的動作再輸出。
+壓縮檔內有附上inc_futaba.tpl，即是個簡單的範例，可以修改樣板檔以達成其他排版方式。<p />
+＊使用PTE請記得上傳lib_pte.php PTE函式庫，另外要在config設定開啟及使用的樣板檔。開啟PTE會使得程式執行時間加長，但基本上不致影響效率。
+</div>
+<p />
+５‧pixmicat.php
+<div class="txtqu">
+這是會PHP的使用者可以選用的修改方式，直接打開pixmicat.php修改PHP程式碼。
+除非你真的有需求改到處理資料的部份或一些沒獨立出來的XHTML碼 (比如說系統資訊[showstatus()]、搜尋[search()]、後端管理介面[admindel()])，否則請不要嘗試修改。
+再次申明，除非你有能力和知道你在改什麼，否則請不要嘗試修改！
+</div>
+
+</div>
+
+<hr />
+</body>
+</html>

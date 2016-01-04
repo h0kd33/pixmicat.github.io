@@ -1,85 +1,52 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Pixmicat by scribetw</title>
-  </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw" lang="zh-tw">
+<head>
+	<title>Pixmicat! in Development</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<meta name="keywords" content="pixmicat.php,pixmicat!-pio,pixmicat!-log,pixmicat!-mysql,pixmicat!,pixmicat,futaba.php,futaba,futaba-MySQL,gazoubbs,scribe FIXED,GazouBBS雙葉改,futaba改版,futaba架設,futaba使用" />
+	<meta name="description" content="Pixmicat! in Development, Pixmicat! 圖咪貓貼圖版程式的官方網站. The official web site of Pixmicat! image board." />
+	<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	if(typeof(_gat) != "undefined") {
+		var pageTracker = _gat._getTracker("UA-405664-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	}
+	</script>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="http://pixmicat.openfoundry.org/">
+	<dc:title>Pixmicat! in Development</dc:title>
+	<dc:description>The official web site of Pixmicat! image board.</dc:description>
+	<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/tw/" />
+</Work>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/tw/">
+	<requires rdf:resource="http://web.resource.org/cc/Attribution" />
+	<requires rdf:resource="http://web.resource.org/cc/Notice" />
+	<requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
 
-        <header>
-          <h1>Pixmicat</h1>
-          <h2>Pixmicat! Imageboard System</h2>
-        </header>
+	<prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/scribetw/pixmicat/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/scribetw/pixmicat/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/scribetw/pixmicat" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+	<permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+	<permits rdf:resource="http://web.resource.org/cc/Distribution" />
+	<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+</License>
+</rdf:RDF>
+-->
+</head>
+<frameset cols="110,*">
+	<noframes>
+	<body>
+	<p>Pixmicat! in Development</p><hr />
+	<p>Welcome to this web site. It's the official site of an image board named "Pixmicat!." Because this web browser doesn't support the frameset, you can use <a href="menu.htm">this menu</a> to explore the whole site.</p>
+	<p>歡迎您來到此網站，這裡主要是介紹Pixmicat! 圖咪貓貼圖版的網站。考量到您的瀏覽器可能無法支援框架，若要瀏覽項目請至<a href="menu.htm">選單</a>作進一步的瀏覽。</p>
+	</body>
+	</noframes>
 
-        <hr>
-
-        <section id="main_content">
-          <h1>
-<a id="pixmicat-imageboard-system-" class="anchor" href="#pixmicat-imageboard-system-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pixmicat! Imageboard System <a href="https://drone.io/github.com/scribetw/pixmicat/latest"><img src="https://drone.io/github.com/scribetw/pixmicat/status.png" alt="Build Status"></a>
-</h1>
-
-<h2>
-<a id="what-is-this" class="anchor" href="#what-is-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is this?</h2>
-
-<p>It's a bulletin board system which is aimed to share image files and make a comment on these images. Registration is not needed to create a new topic, reply, or download image files. Forked from futaba.php that a Japanese website 2chan (Futaba channel) released.</p>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
-
-<p>Artistic License 2.0</p>
-
-<h2>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
-
-<ul>
-<li>PHP 5.3.0 or above (PHP 4 is not supported)</li>
-<li>GD module</li>
-</ul>
-
-<h2>
-<a id="resources" class="anchor" href="#resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h2>
-
-<ul>
-<li>Google Code: <a href="http://code.google.com/p/pixmicat/">http://code.google.com/p/pixmicat/</a>
-</li>
-<li>Project site: <a href="http://pixmicat.openfoundry.org/">http://pixmicat.openfoundry.org/</a> (Chinese zh-TW)</li>
-</ul>
-        </section>
-
-        <footer>
-          Pixmicat is maintained by <a href="https://github.com/scribetw">scribetw</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-405664-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-      </div>
-    </div>
-  </body>
+	<frame name="menu" src="menu.htm" scrolling="auto" />
+	<frame name="main" src="main.htm" />
+</frameset>
 </html>

@@ -1,0 +1,32 @@
+/* CSS Defination @ 2006/02/26 */
+body {
+	font-family: Arial; background-color: #FEC;
+	color: #000;
+}
+
+.Banner	{
+	font-family: Arial; text-indent: 10px; background-color: #FF9;
+	font-style: italic; color: #F33;
+	border-left: 2px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+.subBanner {
+	text-indent: 10px; background-color: #9F9;
+	font-weight: bold; color: #085D94;
+	border-left: 2px solid #F60;
+	border-bottom: 1px solid #F60;
+}
+
+hr {
+	color: #000;
+}
+
+.txtqu {
+	text-indent: 24pt;
+}
+
+.quote{
+	margin: 20px 40px;
+	zoom: 1; /* IE Layout fix */
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-tw">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-tw" />
+	<meta name="robots" content="index,follow" />
+	<title>User Manual : Pixmicat! in Development</title>
+	<link rel="stylesheet" type="text/css" href="hpstyle.css" />
+	<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	if(typeof(_gat) != "undefined") {
+		var pageTracker = _gat._getTracker("UA-405664-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	}
+	</script>
+	<style type="text/css">
+		.Form_bg { background-color: #EEAA88; } /* 送出表單左方欄位之底色 */
+	</style>
+</head>
+<body>
+<p class="Banner">使用手冊</p>
+<div class="quote">
+
+<p class="subBanner">前言</p>
+<div class="txtqu">
+撰寫這篇使用手冊，希望對瀏覽和使用Pixmicat!貼圖版（或類似貼圖版如futaba）能有所幫助。<p />
+本手冊將教你如何張貼你的第一個文章、回應及其他進階技巧，並讓你能夠刪除你自己發出的文章或圖檔。
+</div>
+
+<p class="subBanner">簡易介紹</p>
+<div class="txtqu">
+貼圖版有別而傳統BBS系統以文字為主的形式，是個以圖片交流為主的版面。
+在日本，2ch和雙葉站分別能代表這兩種形式。前者的版面系統相當多樣化，後者目前以雙葉的futaba.php最有名，
+Pixmicat!即是依據futaba.php所修訂而成。當然除了Pixmicat!之外還有很多futaba改版（通稱futaba系貼圖版），像是POTI-board線上繪圖版或是しおから的siokara.php，但操作方式大致相同。
+</div>
+
+<p class="subBanner">發文 / 回應</p>
+<div class="txtqu">
+首先進入版面，映入眼簾的介面可能會讓你有點熟悉，這版面有點像常見的留言版形式而不似於大型論壇。
+當然貼文也不像大型論壇需要註冊，甚至不需附上名字，這就是自2ch傳來的匿名版的特別之處。<p />
+首先讓我們來學習如何使用這個版面的發文 / 回應表單介面：
+</div>
+
+<div style="text-align: center;">
+<table cellpadding="1" cellspacing="1" style="margin: 0px auto; text-align: left;">
+<tr><td class="Form_bg"><b>名 稱</b></td><td><input type="text" name="name" size="28" /></td></tr>
+<tr><td class="Form_bg"><b>E-mail</b></td><td><input type="text" name="email" size="28" /></td></tr>
+<tr><td class="Form_bg"><b>標 題</b></td><td><input type="text" name="sub" size="35" /><input type="button" value="送 出" /></td></tr>
+<tr><td class="Form_bg"><b>內 文</b></td><td><textarea name="com" cols="48" rows="4" style="width: 400px; height: 80px;"></textarea></td></tr>
+<tr><td class="Form_bg"><b>附加檔案</b></td><td><input type="file" name="upfile" size="25" /> [<input type="checkbox" name="up_series" id="up_series" value="on" /><label for="up_series">連貼機能</label>]</td></tr>
+<tr><td class="Form_bg"><b>刪除用密碼</b></td><td><input type="password" name="pwd" size="8" maxlength="8" value="" /><small>(刪除文章用。英數字8字元以內)</small></td></tr>
+<tr><td colspan="2">
+<div style="font-size: 10pt;">
+<ul>
+<li>可附加檔案類型：GIF, JPG, PNG，瀏覽器才能正常附加檔案</li>
+<li>附加檔案最大上傳資料量為 512 KB。當回文時E-mail填入sage為不推文功能</li>
+<li>當檔案超過寬 250 像素、高 250 像素時會自動縮小尺寸顯示</li>
+<li>目前附加檔案使用量大小： 16450 KB / 20480 KB</li>
+</ul>
+</div>
+</td></tr>
+</table>
+</div>
+
+<div class="txtqu">
+以上是一個範例表單，可能與實際情況多有出入，不過足以當成範例來說明。<p />
+首先futaba系的貼圖版強調的是圖而不是文，所以可能要請你先挑選適合此版面的圖檔以張貼，
+但是還是要依版面規定（有的可能是文字版）。
+利用「附加檔案」一欄的上傳選擇器選擇欲上傳的圖檔（一次只能上傳一張），
+請注意選擇圖檔類型（副檔名）和檔案大小是否符合版面規定（相關規定可以查看表單底下的說明），
+基本上這樣就可以按下「送出」按鈕，為最易捷的發文方式。<p />
+
+有的版面可能設定必須要註名方可貼圖（系統為Pixmicat!可查看「系統資訊」頁的「接受匿名發送」欄設定），
+這時候除了上面的選擇圖檔外，你還需要在「名稱」填上自己的暱稱，方可貼文<p />
+有的時候你會想要有刪除自己文章的可能性，這時候可以利用最下方的「刪除用密碼」一欄設定密碼，
+往後遇到需要刪除文章或圖片的情況，可以利用此密碼自行刪除，不需再拜託管理者代刪。如何刪除自己的文章，將會在下面的章節提到。
+<b>總之這是個重要的功能，希望每個使用者都能學起來</b>。<p />
+
+「名稱」欄位不是只在版面規定需要註名時才填上，一般而言使用者都會填上自己常用的暱稱。
+但假如有一天你常去的貼圖站突然有人使用的暱稱跟你一樣，難免尷尬，尤其futaba系貼圖版從名字也不容易分辨人，這時候要怎麼辦呢？
+這種環境下產生了一種特殊的註記，我們叫他<b>2chトリップ</b>（延伸閱讀：<a href="http://raccy.xrea.jp/ruby/trip.html">2chトリップ</a>）。
+使用方法很簡單，發文時除了按照以往填上名稱外，<b>另外在名稱後面加上井字號（＃#皆可，但推薦#）和幾個別讓人知道的文字</b>（英數文字推薦，其他雙位元文字不建議）
+例如「test#APPLE」這樣，發文後就可得到「test◆am/upXHX12」這個包含◆和10個英數符號的名稱。一般來說，
+要從am/upXHX12反推回APPLE是非常不容易的，用電腦暴力破解的話也要花上好幾年，且有心人士以test◆am/upXHX12當名稱發文後，
+會被系統偵測出偽造トリップ而自動變為test◇am/upXHX12，很容易辨別。所以除了生成トリップ的文字被人知道的情況外，這可是相當不錯的辨識工具。<p />
+
+除了名稱欄位有此玄機外，不起眼的「E-mail」欄位同樣也有。常常聽到人家喊「sage」「sage」的，就是用在這裡的功能，我們叫他<b>sage機能</b>或不推文功能。
+如果你回應了一篇文章，一般情況下這討論串會上浮，但有的時候你並不想讓這篇討論串上浮，就可以<b>在E-mail填上半形「sage」四字（大寫亦可，不過建議小寫），
+這樣一來回應後時此討論串便不會上浮</b>。附帶一提sage的日文是下げ，意思就是降低。<p />
+
+Pixmicat!有個特別機制叫做「連貼機能」。一般來說貼了圖後就會回到主版面，但有的時候想連續回應貼圖、或是想貼一串圖時，就可以活用這個機能。
+使用方法很簡單，<b>在送出前確認「連貼機能」有勾選起來就可以了</b>。但連貼機能可以依管理者需求而強制關閉，有出現「連貼機能」勾選欄就表示管理者有開啟。
+只要啟動之後發了文，便會回到同一篇文章的回應模式，且連貼機能仍繼續啟動，就可以一直貼下去了。<p />
+
+讓我們複習一下，您會不會發文了？
+<ul>
+	<li>選擇好適合的圖檔後，視需要填妥其他欄位，按下送出。</li>
+	<li>如果事後要刪除文章或圖檔，請記得送出前填上刪除用密碼。</li>
+	<li>名稱一欄可以加上「#文字」來啟動トリップ功能用以辨識。 －2chトリップ機能</li>
+	<li>回應文章時，發文之E-mail填入sage就不會推文。 －sage機能</li>
+	<li>有連續貼圖的需要，請勾選連貼機能。 －連貼機能</li>
+</ul>
+</div>
+
+<p class="subBanner">刪除文章、圖檔</p>
+<div class="txtqu">
+學會了發文和回應後，如果發現你剛剛的文章不符合版面規定，或是你貼的圖違反了版規，難道只能乖乖等管理者來大D斬嗎？
+其實你可以自己刪除的，請看以下說明，你就可以了解。<p />
+
+首先先瀏覽版面尋找欲刪除的文章位置，可以發現會有個勾選框（<input type="checkbox" name="20145" value="delete" />）可以勾選，
+請勾起來表示你要對這篇文章進行處理。如果你有多個文章需要處理，也可以一次勾選起來處理。然後將瀏覽器捲軸拉到最底，在換頁列的右邊有個【刪除文章】操作專區。
+</div>
+
+<div style="text-align: center;">
+<table style="margin: 0px auto; text-align: left;">
+<tr><td align="center" style="white-space: nowrap;">
+<input type="hidden" name="mode" value="usrdel" />
+【刪除文章】[<input type="checkbox" name="onlyimgdel" id="onlyimgdel" value="on" /><label for="onlyimgdel">僅刪除附加檔案</label>]<br />
+刪除用密碼: <input type="password" name="pwd" size="8" maxlength="8" value="" />
+<input type="button" value=" 刪除 " />
+</td></tr>
+</table>
+</div>
+
+<div class="txtqu">
+如果你只是要刪除圖片並保留整個文章（及討論串），請勾選「僅刪除附加檔案」，如果想要刪除整個文章，則不必更動。
+然後填入事前設定的刪除用密碼（正常情況下，瀏覽器會幫您記憶在Cookies並自動填入），按下「刪除」按鈕送出刪除要求。
+待系統處理完畢後就大功告成了。<p />
+
+有的時候你可能在發文時忘記而沒有填入刪除用密碼，這個時候難道就沒有刪除權了嗎？
+別擔心，還是有的。只不過這種情況下您的刪除權比較難保留，所以還是建議您養成填上刪除用密碼的習慣。
+一般來說在你發文後系統會自動確認各欄位。假如你未填刪除用密碼，則系統會自動生成八個字元的隨機密碼並記錄於瀏覽器的Cookies內。
+而當你要使用【刪除文章】操作專區刪除時，因為系統已為你從Cookies取出密碼並填入，因此你不必去記這隨機密碼。
+但是要記得的是Cookies的保存期限只有七天，所以比較不穩定。<p />
+
+除了刪除用密碼和Cookies之外，系統也使用了IP位置作為判斷參考。假如你忘記了刪除用密碼，而Cookies也消失了，但是你的IP位置沒變，
+則可以直接勾選想要刪除的文章後（可視情況勾選僅刪除附加檔案），直接按下刪除而不需要填入密碼。假如你的IP與發文時記錄的IP一致，則認可刪除。
+這種情況適用在發文後幾分鐘突然想刪除的時候。很多人常常誤以為不必填密碼就能刪文，所以認為每個人都能亂刪文章，或者就認為沒有填入刪除用密碼的必要，其實都是錯誤的。
+<b>Cookies會消失，IP會改變，只有自己設定的刪除用密碼才是真正安心的</b>。<p />
+
+複習一下，您會自己刪除文章了嗎？
+<ul>
+	<li>勾選欲刪除的留言之操作框後，到網頁底下的【刪除文章】填入密碼後按下刪除。</li>
+	<li>如果僅是要刪圖，請勾選僅刪除附加檔案。 －刪圖不刪文</li>
+	<li>忘記事前填密碼還有Cookies幫你記憶，但是不穩定。 －Cookies密碼記錄功能</li>
+	<li>如果連設定的密碼都忘了、Cookies也沒了，則還有IP可以作為刪除認證。</li>
+	<li>發文後幾分鐘發現錯誤想要刪除，不必填密碼直接刪除即可。 －以IP或Cookies作認證</li>
+</ul>
+</div>
+－手冊底端－
+</div>
+<hr />
+</body>
+</html>
